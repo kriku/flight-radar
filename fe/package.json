@@ -1,5 +1,5 @@
 {
-  "name": "fe",
+  "name": "@flight-radar/fe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +16,7 @@
     "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
+    "@flight-radar/be": "*",
     "@types/leaflet": "^1.9.22",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",

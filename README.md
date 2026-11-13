@@ -21,11 +21,15 @@ The expected frontend should include:
 
 ### Install & Start
 
+The repository is an npm workspaces monorepo (`be`, `fe`). Run all commands from the root.
+
 ```bash
-cd be
 npm install
-npm run dev
+npm run dev:be   # backend
+npm run dev:fe   # frontend
 ```
+
+The frontend imports the backend types from `@flight-radar/be/types` (see `fe/src/types.ts`).
 
 The server listens at `ws://localhost:4000` by default.
 

@@ -73,3 +73,11 @@ export type PlaneDetailsMessage = {
   data: PlaneDetailed;
 };
 
+
+/**
+ * WebSocket error message (both endpoints)
+ */
+export type ErrorMessage = {
+  type: "error";
+  message: string;
+};

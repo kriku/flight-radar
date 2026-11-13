@@ -1,8 +1,12 @@
 {
-  "name": "flight-radar-backend",
+  "name": "@flight-radar/be",
+  "private": true,
   "version": "1.0.0",
   "description": "WebSocket flight simulation backend",
   "main": "dist/index.js",
+  "exports": {
+    "./types": "./src/types.ts"
+  },
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
@@ -21,4 +25,3 @@
     "typescript": "^5.3.3"
   }
 }
-

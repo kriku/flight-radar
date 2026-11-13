@@ -1,4 +1,5 @@
 import { MapContainer, TileLayer } from "react-leaflet";
+import { StatusBar } from "./components/StatusBar";
 
 const INITIAL_CENTER: [number, number] = [45, -75];
 const INITIAL_ZOOM = 4;
@@ -7,15 +8,18 @@ const TILES_URL =
 
 function App() {
   return (
-    <MapContainer
-      center={INITIAL_CENTER}
-      zoom={INITIAL_ZOOM}
-      className="map"
-      attributionControl={false}
-      zoomControl={false}
-    >
-      <TileLayer url={TILES_URL} />
-    </MapContainer>
+    <div className="app">
+      <MapContainer
+        center={INITIAL_CENTER}
+        zoom={INITIAL_ZOOM}
+        className="map"
+        attributionControl={false}
+        zoomControl={false}
+      >
+        <TileLayer url={TILES_URL} />
+      </MapContainer>
+      <StatusBar />
+    </div>
   );
 }
 

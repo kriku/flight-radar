@@ -5,7 +5,72 @@ body,
   margin: 0;
 }
 
+.app {
+  position: relative;
+  height: 100%;
+}
+
 .map {
   height: 100%;
   width: 100%;
+}
+
+.status-bar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Leaflet map panes use z-index up to 700. Show the bar above them. */
+  z-index: 1000;
+  /* Let map drag and zoom go through the bar. The items stay selectable. */
+  pointer-events: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding: 4px 12px;
+  font: 12px/1.5 system-ui, sans-serif;
+  color: #f9fafb;
+  background: rgb(17 24 39 / 55%);
+  backdrop-filter: blur(4px);
+  text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+}
+
+.status-bar__group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+  min-width: 0;
+}
+
+.status-bar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  pointer-events: auto;
+}
+
+.status-bar__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #9ca3af;
+}
+
+[data-status="open"] > .status-bar__dot {
+  background: #22c55e;
+}
+
+[data-status="connecting"] > .status-bar__dot {
+  background: #f59e0b;
+}
+
+[data-status="closed"] > .status-bar__dot {
+  background: #ef4444;
+}
+
+.status-bar__error {
+  color: #fca5a5;
 }

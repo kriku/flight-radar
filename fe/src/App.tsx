@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer } from "react-leaflet";
 import { StatusBar } from "./components/StatusBar";
+import { PlanesLayer } from "./map/PlanesLayer";
 
 const INITIAL_CENTER: [number, number] = [45, -75];
 const INITIAL_ZOOM = 4;
@@ -17,6 +18,7 @@ function App() {
         zoomControl={false}
       >
         <TileLayer url={TILES_URL} />
+        <PlanesLayer />
       </MapContainer>
       <StatusBar />
     </div>

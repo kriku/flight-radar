@@ -6,6 +6,7 @@
     "dev:be": "npm run dev -w @flight-radar/be",
     "dev:fe": "npm run dev -w @flight-radar/fe",
     "build": "npm run build -w @flight-radar/be -w @flight-radar/fe",
-    "lint": "npm run lint -w @flight-radar/fe"
+    "lint": "npm run lint -w @flight-radar/fe",
+    "test": "npm run test:run -w @flight-radar/fe"
   }
 }

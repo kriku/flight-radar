@@ -3,6 +3,7 @@ node_modules/
 be/node_modules/
 
 # Build outputs
+coverage/
 be/dist/
 
 # Environment variables

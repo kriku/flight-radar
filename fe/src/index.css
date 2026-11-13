@@ -31,8 +31,8 @@ body,
   padding: 4px 12px;
   font: 12px/1.5 system-ui, sans-serif;
   color: #f9fafb;
-  background: rgb(17 24 39 / 55%);
-  backdrop-filter: blur(4px);
+  background: rgb(17 24 39 / 85%);
+  backdrop-filter: blur(6px);
   text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
 }
 
@@ -96,4 +96,114 @@ body,
 
 .plane-icon--selected svg {
   filter: drop-shadow(0 0 14px rgb(0 0 0 / 30%));
+}
+
+.plane-details {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  /* Show the box above the Leaflet panes, like the status bar. */
+  z-index: 1000;
+  box-sizing: border-box;
+  width: 300px;
+  max-width: calc(100% - 24px);
+  /* Keep the box above the status bar. */
+  max-height: calc(100% - 64px);
+  overflow-y: auto;
+  padding: 12px 14px;
+  font: 13px/1.4 system-ui, sans-serif;
+  color: #f9fafb;
+  background: rgb(17 24 39 / 85%);
+  backdrop-filter: blur(6px);
+  border-top: 4px solid #9ca3af;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 35%);
+}
+
+.plane-details__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.plane-details__title h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.plane-details__title p {
+  margin: 0;
+  color: #d1d5db;
+}
+
+.plane-details__close {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1;
+  color: inherit;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.plane-details__close:hover,
+.plane-details__close:focus-visible {
+  background: rgb(255 255 255 / 15%);
+}
+
+.plane-details__route {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.plane-details__cities {
+  margin: 0;
+  color: #d1d5db;
+}
+
+.plane-details__section h3 {
+  margin: 12px 0 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.plane-details__section dl {
+  margin: 0;
+}
+
+.plane-details__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.plane-details__row dt {
+  color: #d1d5db;
+}
+
+.plane-details__row dd {
+  margin: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.plane-details__loading {
+  margin: 10px 0 0;
+  color: #d1d5db;
+}
+
+.plane-details__error {
+  margin: 10px 0 0;
+  color: #fca5a5;
 }

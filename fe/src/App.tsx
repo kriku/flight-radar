@@ -1,4 +1,5 @@
 import { MapContainer, TileLayer } from "react-leaflet";
+import { PlaneDetailsPanel } from "./components/PlaneDetailsPanel";
 import { StatusBar } from "./components/StatusBar";
 import { PlanesLayer } from "./map/PlanesLayer";
 
@@ -20,6 +21,7 @@ function App() {
         <TileLayer url={TILES_URL} />
         <PlanesLayer />
       </MapContainer>
+      <PlaneDetailsPanel />
       <StatusBar />
     </div>
   );

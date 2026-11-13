@@ -6,11 +6,11 @@ This repository provides the backend for an interview exercise where a candidate
 
 The expected frontend should include:
 
-- The frontend should be built in the `fe` folder of this
-- Using `React` with `TypeScript`
-- Map view that plots planes in real time. Possible options could be e.g. `MapLibre`, `MapBox`, `Leaflet` or any other map engine provider of your choice.
-- Planes can be selected/unselected to show/hide detailed information
-- Consumes flight data exclusively from the provided WebSocket backend
+- [x] The frontend should be built in the `fe` folder of this
+- [x] Using `React` with `TypeScript`
+- [x] Map view that plots planes in real time. Possible options could be e.g. `MapLibre`, `MapBox`, `Leaflet` or any other map engine provider of your choice.
+- [x] Planes can be selected/unselected to show/hide detailed information
+- [x] Consumes flight data exclusively from the provided WebSocket backend
 
 ## Backend
 
